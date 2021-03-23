@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import config.driverConfig.WebDriverM;
 import org.openqa.selenium.WebDriver;

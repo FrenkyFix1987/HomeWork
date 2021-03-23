@@ -1,6 +1,6 @@
 package ui.steps;
 
-import Pages.PageGenerator;
+import pages.PageGenerator;
 import config.driverConfig.WebDriverM;
 
 public class BaseStep{
