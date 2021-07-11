@@ -4,17 +4,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage{
     public HomePage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(how= How.LINK_TEXT, using = "http://automationpractice.com/index.php?controller=my-account")
+    @FindBy(how= How.CLASS_NAME, using = "login")
     private WebElement signInBtn;
 
-    public void openRegistrationPage() {
+    public RegistrationPage openRegistrationPage() {
         goToLink(signInBtn, "http://automationpractice.com/index.php");
+        signInBtn.click();
+        return PageFactory.initElements(webDriver, RegistrationPage.class);
     }
 
 }

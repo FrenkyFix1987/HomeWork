@@ -11,7 +11,7 @@ public class Hook {
 
     @After
     public void afterScenario(Scenario scenario) {
-        webDriverM = new WebDriverM();
+
     }
 
 }

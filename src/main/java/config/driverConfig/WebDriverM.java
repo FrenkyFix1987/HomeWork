@@ -1,4 +1,5 @@
 package config.driverConfig;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,7 +19,7 @@ public class WebDriverM {
     }
 
     private WebDriver createLocalDriver() {
-        System.setProperty("webdriver.chrome.driver", "/HomeWork/src/main/resources/chromedriver");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
